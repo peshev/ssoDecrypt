@@ -79,7 +79,7 @@ public class ssoDecryptor
             walletP12 = new byte[ walletSSO.length - 77 ];
             System.arraycopy( walletSSO, 77, walletP12, 0, walletP12.length );
             walletSSOheader = getSSOheader();
-
+	    System.out.println("SSO version is " + getSSOVersion());
             // check the wallet version
             switch ( getSSOVersion() ) {
                 case 1:
